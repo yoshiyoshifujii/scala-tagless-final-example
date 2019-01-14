@@ -11,10 +11,10 @@ class AccountCreateUseCase[F[_]: Monad: UserRepository: AccountRepository] {
 
   def execute(name: String, email: String): F[String] = {
     for {
-      userId <- implicitly[UserRepository[F]].store(
+      userId <- UserRepository[F].store(
         User(UserId("1"), name)
       )
-      accountId <- implicitly[AccountRepository[F]].store(
+      accountId <- AccountRepository[F].store(
         Account(AccountId("2"), userId, email)
       )
     } yield s"$userId-$accountId"
