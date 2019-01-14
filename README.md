@@ -1,6 +1,6 @@
 # scala-tagless-final-example
 
-Scalaで、Higher Kindが異なるRepositoryを、Tagless Finalで良い感じにUse Caseに実装する手法についてまとめました。
+ScalaでTagless Final StyleにRepositoryを設計した際に、Higher Kindが異なるRepositoryを、良い感じにUse Caseに実装する手法についてまとめました。
 
 ```
 $ sbt test
